@@ -1,20 +1,19 @@
 import '../styles/globals.css';
-import { FaUser } from "react-icons/fa";    
+import { FaUser, FaLock } from "react-icons/fa";    
 
 export default function LoginPage() {
     return (
         <div className="login-page">
             <div className="login-form">
-                <h2>Login</h2>
+                <h1>Login</h1>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="text">UCP</label>
-                        <input type="text" id="UCP" placeholder="Masukkan UCP Anda" required />
-                        <FaUser />
+                        <FaUser className="icon"/>
+                        <input type="text" id="UCP" placeholder="UCP Name" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" placeholder="Masukkan password Anda" required />
+                        <FaLock className="icon"/>
+                        <input type="password" id="password" placeholder="Password" required />
                     </div>
                     <button type="submit">Login</button>
                 </form>
