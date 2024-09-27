@@ -1,23 +1,20 @@
-import '../styles/globals.css';
-import { FaUser, FaLock } from "react-icons/fa";    
+import "@/styles/globals.css";
 
-export default function LoginPage() {
+import { NavBar } from "@/components/NavBar/NavBar";
+import { LoginPage } from "@/components/LoginForm/LoginForm";
+
+const App = () => {
     return (
-        <div className="login-page">
-            <div className="login-form">
-                <h1>Login</h1>
-                <form>
-                    <div className="form-group">
-                        <FaUser className="icon"/>
-                        <input type="text" id="UCP" placeholder="UCP Name" required />
-                    </div>
-                    <div className="form-group">
-                        <FaLock className="icon"/>
-                        <input type="password" id="password" placeholder="Password" required />
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
-            </div>
-        </div>
+    <>
+        <head>
+            <link rel="icon" href="/jt-icon.png" />
+        </head>
+        <body>
+            <NavBar />
+            <LoginPage />
+        </body>
+    </>
     );
 }
+
+export default App;
