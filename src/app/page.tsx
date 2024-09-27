@@ -1,5 +1,5 @@
-
 import '../styles/globals.css';
+import { FaUser } from "react-icons/fa";    
 
 export default function LoginPage() {
     return (
@@ -10,6 +10,7 @@ export default function LoginPage() {
                     <div className="form-group">
                         <label htmlFor="text">UCP</label>
                         <input type="text" id="UCP" placeholder="Masukkan UCP Anda" required />
+                        <FaUser />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
