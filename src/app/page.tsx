@@ -1,18 +1,23 @@
-export default function page () {
+
+import '../styles/globals.css';
+
+export default function LoginPage() {
     return (
-        <div className="nav-header">
-            <nav className="d-flex">
-                <div className="px-5 marketplace-name">
-                    <img src="jt-logo.png" alt="jt-logo" />
-                </div>
-                <div className="ms-auto my-auto">
-                    <ul className="menu-buttons px-5">
-                        <li><a href="#myCarousel" className="text-decoration-none text-dark fw-bold">Home</a></li>
-                        <li><a href="#product" className="text-decoration-none text-dark fw-bold">Product</a></li>
-                        <li><a href="#order" className="text-decoration-none text-dark fw-bold">How to Order</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <div className="login-page">
+            <div className="login-form">
+                <h2>Login</h2>
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="text">UCP</label>
+                        <input type="text" id="UCP" placeholder="Masukkan UCP Anda" required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" placeholder="Masukkan password Anda" required />
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
         </div>
     );
 }
