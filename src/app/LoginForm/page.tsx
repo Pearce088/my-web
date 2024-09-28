@@ -1,8 +1,10 @@
 import LoginForm from "./LoginForm"
+import "@/styles/globals.css";
+import NavBar from '@/components/layout/NavBar/NavBar';
 
-const LoginPage = () => {
+const LoginApp = () => {
     return (
         <LoginForm />
     )
 };
-export default LoginPage;
+export default LoginApp;
