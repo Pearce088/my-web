@@ -1,0 +1,72 @@
+/* Custom styling for the navbar */
+
+/* Navbar container */
+.navbar {
+  background: transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Efek bayangan di bawah navbar */
+  backdrop-filter: blur(10px); /* Efek blur untuk konten di belakang navbar */
+  position: sticky; /* Membuat navbar tetap di posisi atas saat halaman di-scroll */
+  top: 0; /* Posisi di atas */
+  left: 0; /* Menempel pada sisi kiri */
+  width: 100%; /* Lebar navbar 100% dari layar */
+  z-index: 50; /* Prioritas lapisan untuk memastikan navbar di atas elemen lain */
+  padding: 10px 0; /* Padding vertikal pada navbar */
+}
+
+/* Container for content */
+.navbar .container {
+  max-width: 1200px; /* Lebar maksimum container */
+  margin: 0 auto; /* Mengatur margin otomatis agar container berada di tengah */
+  padding: 0 20px; /* Padding horizontal untuk memberikan ruang di kiri dan kanan */
+  display: flex; /* Menggunakan flexbox untuk pengaturan layout */
+  justify-content: space-between; /* Mengatur elemen di dalam container agar berjauhan */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  height: 60px; /* Tinggi tetap untuk navbar */
+}
+
+/* Logo styling */
+.navbar .logo img {
+  height: auto; /* Menyesuaikan tinggi gambar logo */
+  width: 150px; /* Lebar tetap untuk logo */
+  cursor: pointer; /* Mengubah cursor menjadi pointer saat logo di-hover */
+}
+
+/* Navigation links */
+.navbar .nav-links {
+  display: flex; /* Menggunakan flexbox untuk tautan navigasi */
+  gap: 20px; /* Memberikan jarak antar tautan */
+}
+
+.navbar .nav-link {
+  color: #e451f1; /* Warna teks abu-abu terang */
+  padding: 10px 15px; /* Padding dalam tautan navigasi */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+  font-size: 16px; /* Ukuran teks tautan */
+  border-radius: 8px; /* Sudut melengkung pada latar tautan */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transisi warna saat tautan di-hover */
+  font-family: "Poppins", sans-serif; /* Font family yang digunakan */
+}
+
+.navbar .nav-link:hover {
+  color: #f73eed; /* Mengubah warna teks saat di-hover menjadi biru tua */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  /* Pengaturan untuk layar kecil, dengan lebar maksimum 768px */
+  .navbar .container {
+    flex-direction: column; /* Mengubah arah elemen dari horizontal menjadi vertikal */
+    align-items: flex-start; /* Menyelaraskan elemen di kiri saat layar kecil */
+  }
+
+  .navbar .nav-links {
+    margin-top: 10px; /* Memberikan jarak atas pada navigasi */
+    flex-direction: column; /* Mengubah arah tautan navigasi menjadi vertikal */
+    gap: 10px; /* Jarak antar tautan lebih kecil untuk layar kecil */
+  }
+
+  .navbar .nav-link {
+    width: 100%; /* Membuat setiap tautan menjadi lebar penuh pada layar kecil */
+    text-align: center; /* Menyelaraskan teks tautan di tengah */
+  }
+}

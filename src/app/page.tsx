@@ -1,9 +1,10 @@
 import "@/styles/globals.css";
 
-import { NavBar } from "@/components/NavBar/NavBar";
 import LoginPage from "@/components/LoginForm/LoginForm";
+import NavBar from "@/components/layout/NavBar/NavBar";
 
 const App = () => {
+ 
     return (
     <>
         <head>

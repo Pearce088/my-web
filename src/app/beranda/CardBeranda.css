@@ -1,0 +1,49 @@
+/* Mengatur layout grid agar lebih responsif */
+.card-container {
+    width: 90%; /* Lebar container diatur 90% dari layar */
+    padding: 20px; /* Menambahkan padding 20px di dalam container */
+    margin: 0 auto; /* Mengatur margin agar container berada di tengah */
+}
+  
+.grid-container {
+    display: grid; /* Menggunakan display grid untuk membuat layout berbasis grid */
+    grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom yang masing-masing memiliki lebar fraksi yang sama */
+    gap: 20px; /* Menambahkan jarak 20px antara setiap kolom (card) */
+}
+  
+/* Tambahan styling untuk card */
+.card-item {
+    background-color: rgb(226, 77, 176); /* Mengatur warna latar belakang card */
+    padding: 20px; /* Memberikan padding 20px di dalam card */
+    border-radius: 8px; /* Membuat sudut card membulat dengan radius 8px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada card untuk efek kedalaman */
+    transition: box-shadow 0.3s ease; /* Animasi perubahan bayangan saat hover dengan durasi 0.3 detik */
+}
+  
+.card-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Mengatur bayangan card saat di-hover untuk menambah kedalaman */
+}
+  
+.card-item h2 {
+    font-size: 1.25rem; /* Ukuran font heading 2 sebesar 1.25rem */
+    font-weight: bold; /* Mengatur font-weight menjadi bold (tebal) */
+    margin-bottom: 10px; /* Menambahkan jarak bawah sebesar 10px setelah heading */
+    color: #ffffff; /* Mengatur warna teks heading menjadi putih */
+}
+  
+.card-item p {
+    color: #ffffff; /* Mengatur warna teks deskripsi menjadi putih */
+}
+  
+/* Responsif: Adjust grid untuk layar lebih kecil */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Mengubah grid menjadi 2 kolom untuk layar dengan lebar max 1024px */
+    }
+}
+  
+@media (max-width: 640px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi 1 kolom untuk layar dengan lebar max 640px (mobile) */
+    }
+}

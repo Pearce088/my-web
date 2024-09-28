@@ -1,98 +1,105 @@
 /* Style untuk halaman login */
 .login-page {
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding: 0 20px;
+  background: linear-gradient(
+      to bottom,
+      rgba(var(--background-start-rgb), 0.8), /* transparan pada bagian atas */
+      rgba(var(--background-end-rgb), 0.8) /* warna akhir */
+    ),
+    rgb(var(--background-start-rgb)); /* Warna dasar */
+  background-size: cover; /* Latar belakang akan menutupi seluruh halaman */
+  background-position: center; /* Posisi latar belakang di tengah */
+  height: 100vh; /* Tinggi halaman 100% dari viewport */
+  display: flex; /* Menggunakan flexbox untuk pengaturan layout */
+  justify-content: center; /* Menyelaraskan konten ke tengah secara horizontal */
+  align-items: center; /* Menyelaraskan konten ke tengah secara vertikal */
+  color: white; /* Warna teks putih */
+  padding: 0 20px; /* Padding horizontal untuk menambahkan ruang di kiri dan kanan */
 }
 
 .login-form {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 100%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6); /* Warna latar belakang form dengan transparansi */
+  padding: 30px; /* Padding di dalam form */
+  border-radius: 12px; /* Sudut melengkung pada form */
+  max-width: 400px; /* Lebar maksimal form */
+  width: 100%; /* Lebar penuh */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan di bawah form */
+  backdrop-filter: blur(10px); /* Efek blur di belakang form */
 }
 
 .login-form h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: "Poppins", sans-serif;
-  font-size: 24px;
-  color: #ffffff;
+  text-align: center; /* Menyelaraskan judul ke tengah */
+  margin-bottom: 30px; /* Jarak bawah dari judul */
+  font-family: "Poppins", sans-serif; /* Font yang digunakan */
+  font-size: 24px; /* Ukuran font judul */
+  color: #ffffff; /* Warna teks putih */
 }
 
 .form-group {
-  margin-bottom: 25px;
-  position: relative;
+  margin-bottom: 25px; /* Jarak bawah antara input dan elemen lainnya */
+  position: relative; /* Posisi relatif untuk icon input */
 }
 
 .form-group input {
-  width: 100%;
-  padding: 12px 40px 12px 15px;
-  border: 2px solid #ccc;
-  border-radius: 40px;
-  font-size: 14px;
-  background: transparent;
-  color: white;
-  transition: border-color 0.3s ease;
+  width: 100%; /* Lebar penuh untuk input */
+  padding: 12px 40px 12px 15px; /* Padding dalam input, dengan ruang ekstra untuk ikon di sebelah kanan */
+  border: 2px solid #ccc; /* Border abu-abu */
+  border-radius: 40px; /* Sudut melengkung pada input */
+  font-size: 14px; /* Ukuran font input */
+  background: transparent; /* Latar belakang transparan */
+  color: white; /* Warna teks putih */
+  transition: border-color 0.3s ease; /* Efek transisi saat border berubah warna */
 }
 
 .form-group input:focus {
-  border-color: #007bff;
-  outline: none;
+  border-color: #007bff; /* Warna border biru saat input difokuskan */
+  outline: none; /* Menghilangkan outline default browser */
 }
 
 .form-group .icon {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-  color: #ccc;
+  position: absolute; /* Posisi absolut di dalam form-group */
+  right: 15px; /* Jarak dari kanan */
+  top: 50%; /* Posisikan di tengah secara vertikal */
+  transform: translateY(-50%); /* Menyelaraskan ikon secara vertikal */
+  font-size: 18px; /* Ukuran font ikon */
+  color: #ccc; /* Warna ikon abu-abu terang */
 }
 
 button[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  width: 100%; /* Lebar penuh untuk tombol */
+  padding: 12px; /* Padding dalam tombol */
+  background-color: #007bff; /* Warna latar belakang biru */
+  color: white; /* Warna teks putih */
+  border: none; /* Menghilangkan border default */
+  border-radius: 40px; /* Sudut melengkung pada tombol */
+  cursor: pointer; /* Mengubah kursor menjadi pointer saat di-hover */
+  font-size: 16px; /* Ukuran font pada tombol */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transisi untuk efek hover dan klik */
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Warna latar belakang tombol saat di-hover */
 }
 
 button[type="submit"]:active {
-  transform: scale(0.98);
+  transform: scale(0.98); /* Efek skala tombol saat di-klik */
 }
 
 /* Media query untuk membuat halaman lebih responsif */
 @media (max-width: 480px) {
   .login-form {
-      padding: 20px;
+    padding: 20px; /* Padding lebih kecil di layar kecil */
   }
 
   .login-form h1 {
-      font-size: 20px;
+    font-size: 20px; /* Ukuran font lebih kecil pada layar kecil */
   }
 
   .form-group input {
-      font-size: 13px;
+    font-size: 13px; /* Ukuran font input lebih kecil di layar kecil */
   }
 
   button[type="submit"] {
-      font-size: 14px;
-      padding: 10px;
+    font-size: 14px; /* Ukuran font tombol lebih kecil */
+    padding: 10px; /* Padding lebih kecil pada tombol di layar kecil */
   }
 }

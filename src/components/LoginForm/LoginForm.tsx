@@ -3,6 +3,7 @@ import './LoginForm.css';
 
 const LoginPage = () => {
     return (
+      
         //login-page adalah nama class yang kita buat di css.
         <div className="login-page">
             {/* login-form adalah nama class yang kita buat di css. */}
@@ -24,5 +25,4 @@ const LoginPage = () => {
         </div>
     );
 };
-
 export default LoginPage;
