@@ -20,7 +20,7 @@ const NavBar = () => {
           <Link className="nav-link" href="/register">
             REGISTER
           </Link>
-          <Link className="nav-link" href="/components/LoginForm/LoginForm">
+          <Link className="nav-link" href="/LoginForm">
             SIGN IN
           </Link>
           <a className="nav-link" href="https://discord.gg/x2AFCU65T4" target="_blank" rel="noopener noreferrer">

@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 
-import LoginPage from "@/components/LoginForm/LoginForm";
-import NavBar from "@/components/layout/NavBar/NavBar";
+import Beranda from "./beranda/page";
 
 const App = () => {
  
@@ -12,8 +11,7 @@ const App = () => {
         </head>
         <body>
         {/* Untuk menambahkan komponen layout setiap halaman/page */}
-            <NavBar />
-            <LoginPage />
+            <Beranda />
         </body>
     </>
     );
